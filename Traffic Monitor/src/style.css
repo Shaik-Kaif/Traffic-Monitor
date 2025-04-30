@@ -1,0 +1,53 @@
+*{
+  font-family: "Titillium Web", sans-serif;
+}
+
+
+@import "tailwindcss";
+.marquee-wrapper {
+  position: fixed;
+  overflow: hidden;
+  background-color: #1c5474;
+  white-space: nowrap;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.marquee-content {
+  animation: marquee 20s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee-list li {
+  padding: 0 50px;
+  color: #81ebf3;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.marquee-list li a{
+  text-decoration: underline;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
